@@ -52,4 +52,9 @@ namespace PetShop.Views
             }
         }
     }
+
+    class Test
+    {
+        //Класс для коммита, УДАЛИТЬ
+    }
 }
