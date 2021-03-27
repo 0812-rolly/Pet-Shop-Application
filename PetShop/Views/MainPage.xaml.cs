@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using PetShop.Models;
+using Xamarin.Essentials;
 
 namespace PetShop.Views
 {
@@ -22,6 +23,8 @@ namespace PetShop.Views
             MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+
+            //PhoneDialer.Open("+79056437281");
         }
 
         public async Task NavigateFromMenu(int id)

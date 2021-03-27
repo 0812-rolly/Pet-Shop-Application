@@ -4,21 +4,22 @@
             xmlns:views="clr-namespace:PetShop.Views"
             x:Class="PetShop.Views.MainPage">
 
+
     <MasterDetailPage.Master>
         <views:MenuPage />
     </MasterDetailPage.Master>
-
     <MasterDetailPage.Detail>
         <NavigationPage>
+            <x:Arguments>
+              <views:ItemsPage />
+            </x:Arguments>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_feed.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
-                <views:ItemsPage />
-            </x:Arguments>
         </NavigationPage>
+            
     </MasterDetailPage.Detail>
-    
+
 </MasterDetailPage>

@@ -4,7 +4,7 @@
              x:Class="PetShop.Views.MenuPage"
              Title="Menu">
              
-    <StackLayout VerticalOptions="FillAndExpand">
+    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>
