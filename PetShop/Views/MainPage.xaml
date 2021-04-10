@@ -18,8 +18,10 @@
                     <On Platform="iOS" Value="tab_feed.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
+           
         </NavigationPage>
-            
+     
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
+

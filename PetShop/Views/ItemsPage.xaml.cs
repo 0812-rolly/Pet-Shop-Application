@@ -22,6 +22,8 @@ namespace PetShop.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+            btnAbout.Clicked += (s, e) => Navigation.PushAsync(new AboutPage());
+            btnSpaceInfo.Clicked += (s, e) => Navigation.PushAsync(new ItemDetailPage());
         }
 
         async void OnItemSelected(object sender, EventArgs args)

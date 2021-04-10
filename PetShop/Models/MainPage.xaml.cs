@@ -25,6 +25,7 @@ namespace PetShop.Views
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
 
             //PhoneDialer.Open("+79056437281");
+            
         }
 
         public async Task NavigateFromMenu(int id)
