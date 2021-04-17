@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetShop.Views.LoginSuccessPage"
+             BackgroundColor="White" 
+             BackgroundImageSource="paws.png">
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
+        <StackLayout>
+            <Image Source="logo.png" WidthRequest="234" HeightRequest="84" Margin="0,30"/>
+        </StackLayout>
+        <Label Text="Позравляем с успешной авторизацией!"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="Black"
+               HorizontalTextAlignment="Center"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="5">
+
+        </StackLayout>
+        <Label FontSize="16" HorizontalTextAlignment="Center" TextColor="Black" 
+           Text="Пожалуйста, заполните контактные данные
+                в личном кабинете, чтобы удобнее и
+                быстрее оформлять заказ."/>
+        <Button x:Name="btn_Proceed" Text="Перейти к покупкам"
+                Margin="0,70,0,0"
+                BackgroundColor="#FB6A18"
+                WidthRequest="240"
+                HeightRequest="35"
+                FontSize="13"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+        
+        <StackLayout Margin="0, 100">
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
