@@ -11,13 +11,11 @@ namespace PetShop
 
         public App()
         {
-        
-
+            InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            NavigationPage np = new NavigationPage(new ItemsPage());
+            NavigationPage np = new NavigationPage(new LoginPage());
 
             MainPage = np;
-            InitializeComponent();
         }
 
         protected override void OnStart()

@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.808.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Android", "PetShop.Android\PetShop.Android.csproj", "{572C7BE8-96A8-4B15-98BF-15BB8AC03491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop", "PetShop\PetShop.csproj", "{85848ADD-E371-4B0D-B7F2-BA38CA33CC64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShop", "PetShop\PetShop.csproj", "{85848ADD-E371-4B0D-B7F2-BA38CA33CC64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{029DDDBF-368C-4CBE-8B9D-A4E5634DD01D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{029DDDBF-368C-4CBE-8B9D-A4E5634DD01D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{B451C550-1C88-4288-AC2A-CB8C65BD932C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{B451C550-1C88-4288-AC2A-CB8C65BD932C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicTest", "LogicTest\LogicTest.csproj", "{3341F1B1-A837-447F-A34D-9F62C4124B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicTest", "LogicTest\LogicTest.csproj", "{3341F1B1-A837-447F-A34D-9F62C4124B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +21,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{572C7BE8-96A8-4B15-98BF-15BB8AC03491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{572C7BE8-96A8-4B15-98BF-15BB8AC03491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572C7BE8-96A8-4B15-98BF-15BB8AC03491}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{572C7BE8-96A8-4B15-98BF-15BB8AC03491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{572C7BE8-96A8-4B15-98BF-15BB8AC03491}.Release|Any CPU.Build.0 = Release|Any CPU
 		{85848ADD-E371-4B0D-B7F2-BA38CA33CC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

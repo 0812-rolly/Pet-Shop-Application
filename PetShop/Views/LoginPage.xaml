@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetShop.Views.LoginPage"
+             BackgroundColor="White" 
+             BackgroundImageSource="paws.png">
+    
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
+        <StackLayout>
+            <Image Source="logo.png" WidthRequest="234" HeightRequest="84" Margin="0,30"/>
+        </StackLayout>
+        <Label Text="Регистрация аккаунта"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="10">
+            
+        </StackLayout>
+        <Entry x:Name="etr_PhoneNumber" Placeholder="Номер телефона" MaxLength="11"
+               HorizontalTextAlignment="Center"/>
+        <Entry x:Name="etr_SmsCode" Placeholder="Код из SMS" MaxLength="11"
+               HorizontalTextAlignment="Center"/>
+        <Button x:Name="btn_Login" Text="Войти"
+                Margin="0,40,0,0"
+                BackgroundColor="#FB6A18"
+                WidthRequest="220"
+                HeightRequest="35"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal" Margin="0, 14,0,0">
+            <CheckBox x:Name="Cb_Agreement" Color="Gray"/>
+            <Label Text="Я согласен с условиями регистрации" Margin="0,5,0,0"
+                   TextColor="Black"
+                   FontFamily="Comic Sans MS"
+                   FontSize="15"/>
+
+        </StackLayout>
+        <StackLayout Margin="0, 70">
+            
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
