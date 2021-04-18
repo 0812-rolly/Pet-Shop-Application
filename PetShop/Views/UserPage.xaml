@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customentry="clr-namespace:PetShop"
+             x:Class="PetShop.Views.UserPage">
+    <Grid Margin="0">
+        
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
+            <StackLayout>
+                <Image Source="logo.png" WidthRequest="100" HeightRequest="50" Margin="0,0,0,0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Фамилия"
+                FontFamily="Comic Sans MS"
+                FontSize="16"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+                <customentry:CustomEntry Margin="0,5,0,0" x:Name="etr_LastName" Placeholder="Фамилия"
+               HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Имя*"
+                FontFamily="Comic Sans MS"
+                FontSize="16"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+                <customentry:CustomEntry Margin="35,5,0,0" x:Name="etr_FirstName" Placeholder="Имя"
+               HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Отчество"
+                FontFamily="Comic Sans MS"
+                FontSize="16"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+                <customentry:CustomEntry Margin="0,10,0,0" x:Name="etr_Patronymic" Placeholder="Отчество"
+               HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Телефон"
+                FontFamily="Comic Sans MS"
+                FontSize="16"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+                <customentry:CustomEntry Margin="5,15,0,0" x:Name="etr_PhoneNumber" Placeholder="Телефон"
+               HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="E-mail"
+                FontFamily="Comic Sans MS"
+                FontSize="16"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+                <customentry:CustomEntry Margin="30,5,0,0" x:Name="etr_Email" Placeholder="E-mail"
+               HorizontalTextAlignment="Start"/>
+            </StackLayout>
+
+            <Button x:Name="btn_SaveProfile" Text="Сохранить данные"
+                Margin="0,40,0,0"
+                BackgroundColor="#FB6A18"
+                WidthRequest="220"
+                HeightRequest="35"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" Margin="0, 14,0,0">
+            </StackLayout>
+            <StackLayout Margin="0, 120">
+
+            </StackLayout>
+        </StackLayout>
+        <Line X1="0"
+              Y1="65"
+              X2="412"
+              Y2="65"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="125"
+              X2="412"
+              Y2="125"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="185"
+              X2="412"
+              Y2="185"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="245"
+              X2="412"
+              Y2="245"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="305"
+              X2="412"
+              Y2="305"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="365"
+              X2="412"
+              Y2="365"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+    </Grid>
+    
+</ContentPage>

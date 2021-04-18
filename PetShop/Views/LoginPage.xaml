@@ -16,7 +16,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         <StackLayout Margin="10">
-            
+
         </StackLayout>
         <Entry x:Name="etr_PhoneNumber" Placeholder="Номер телефона" MaxLength="11"
                HorizontalTextAlignment="Center"/>

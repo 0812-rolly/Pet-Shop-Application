@@ -10,6 +10,7 @@ namespace PetShop.Views
         public HelloPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
