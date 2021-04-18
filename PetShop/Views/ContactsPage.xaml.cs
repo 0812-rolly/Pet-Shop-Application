@@ -14,6 +14,7 @@ namespace PetShop.Views
     {
         public ContactsPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }
