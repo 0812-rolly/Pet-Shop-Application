@@ -12,8 +12,9 @@ namespace PetShop
         public App()
         {
             InitializeComponent();
+            Device.SetFlags(new[] { "Shapes_Experimental" });
             DependencyService.Register<MockDataStore>();
-            NavigationPage np = new NavigationPage(new LoginPage());
+            NavigationPage np = new NavigationPage(new UserPage());
 
             MainPage = np;
         }
