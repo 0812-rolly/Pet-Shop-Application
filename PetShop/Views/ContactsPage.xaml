@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White" 
+             x:Class="PetShop.Views.ContactsPage">
+    <StackLayout Orientation="Vertical">
+        <StackLayout>
+            <Image Source="logo.png" WidthRequest="100" HeightRequest="50"/>
+        </StackLayout>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Label Text="Контакты"
+                FontSize="23"
+                TextColor="Black"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Margin="40, 30, 0, 30"/>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="Phone_icon" WidthRequest="95" HeightRequest="95" Margin="50, 0, 10, 0"></Image>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                <Label Text="+7 (800) 777-74-67"
+                FontSize="21"
+                FontFamily="Montserrat"
+                TextColor="#F54A00"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"/>
+                <Label Text="+7 (908) 357-67-89"
+                FontSize="21"
+                TextColor="#F54A00"
+                FontFamily="Montserrat"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </StackLayout>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <StackLayout Orientation="Vertical" Margin="40, 25, 40, 0">
+            <Label Text="Email:"
+                FontSize="21"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+            <StackLayout Margin="1"></StackLayout>
+            <Label Text="help@happypets.ru"
+                FontSize="21"
+                TextColor="#F54A00"
+                FontFamily="Montserrat"/>
+            <StackLayout Margin="10"></StackLayout>
+            <Label Text="Адрес магазина:"
+                FontSize="21"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+            <StackLayout Margin="1"></StackLayout>
+            <Label Text="Саратовская область, г. Саратов, ул. Кутякова 134"
+                FontSize="21"
+                TextColor="#F54A00"
+                FontFamily="Montserrat"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
