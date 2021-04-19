@@ -75,10 +75,11 @@
             </StackLayout>
 
             <Button x:Name="btn_SaveProfile" Text="Сохранить данные" 
-                Margin="0,40,10,0"
+                Margin="0,40,0,0"
                 BackgroundColor="#FB6A18"
+                CornerRadius="9"
                 WidthRequest="220"
-                HeightRequest="35"
+                HeightRequest="40"
                 TextColor="White"
                 HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal" Margin="0,14,0,0">

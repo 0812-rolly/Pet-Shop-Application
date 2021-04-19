@@ -10,6 +10,11 @@ namespace PetShop.Views
         public MenuPage()
         {
             InitializeComponent();
+
+            Cats.Source = "Cats.png";
+            Dogs.Source = "Dogs.png";
+            Birds.Source = "Birds.png";
+            Rodents.Source = "Rodents.png";
         }
     }
 }

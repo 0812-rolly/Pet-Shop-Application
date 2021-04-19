@@ -25,8 +25,9 @@
         <Button x:Name="btn_Proceed" Text="Перейти к покупкам"
                 Margin="0,70,0,0"
                 BackgroundColor="#FB6A18"
-                WidthRequest="240"
-                HeightRequest="35"
+                CornerRadius="9"
+                WidthRequest="220"
+                HeightRequest="40"
                 FontSize="13"
                 TextColor="White"
                 HorizontalOptions="Center"/>
