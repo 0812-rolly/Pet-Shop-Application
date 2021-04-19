@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:PetShop.Views"
+    xmlns:local="clr-namespace:PetShop"
+    mc:Ignorable="d" Shell.NavBarIsVisible="False"
+    x:Class="PetShop.Views.AppShell">
+    
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ThemeColor">#FB6A18</Color>
+            <Color x:Key="GrayColor">Gray</Color>
+            <Color x:Key="BgColor">#F0F0F0</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource BgColor}"/>
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource GrayColor}"/>
+                <Setter Property="Shell.TitleColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BgColor}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GrayColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ThemeColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+    <TabBar Style="{StaticResource BaseStyle}">
+       <Tab Title="Главная"
+            Icon="Home.png">
+           <ShellContent ContentTemplate="{DataTemplate views:MenuPage}" />
+       </Tab>
+
+        <Tab Title="Профиль"
+            Icon="Profile.png">
+           <ShellContent ContentTemplate="{DataTemplate views:UserPage}" />
+       </Tab>
+
+        <Tab Title="Корзина"
+            Icon="Basket.png">
+           <ShellContent ContentTemplate="{DataTemplate views:BasketPage}" />
+       </Tab>
+
+        <Tab Title="Контакты"
+            Icon="Contacts.png">
+           <ShellContent ContentTemplate="{DataTemplate views:ContactsPage}" />
+       </Tab>
+    </TabBar>
+
+</Shell>

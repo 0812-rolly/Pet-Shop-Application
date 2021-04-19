@@ -12,11 +12,11 @@ namespace PetShop
         public App()
         {
             InitializeComponent();
-            Device.SetFlags(new[] { "Shapes_Experimental" });
-            DependencyService.Register<MockDataStore>();
-            NavigationPage np = new NavigationPage(new UserPage());
+            //Device.SetFlags(new[] { "Shapes_Experimental" });
+            //DependencyService.Register<MockDataStore>();
+            //NavigationPage np = new NavigationPage(new AppShell());
 
-            MainPage = np;
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

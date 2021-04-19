@@ -3,14 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customentry="clr-namespace:PetShop"
              x:Class="PetShop.Views.UserPage">
-    <Grid Margin="0">
-        
-        <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
+    <Grid>
+
+        <StackLayout>
             <StackLayout>
-                <Image Source="logo.png" WidthRequest="100" HeightRequest="50" Margin="0,0,0,0"/>
+                <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15,110,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,0,20,0">
                 <Label Text="Фамилия"
+                Margin="0,5,0,0"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 TextColor="Black"
@@ -21,92 +31,91 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Имя*"
+                Margin="0,10,0,0"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Start"/>
-                <customentry:CustomEntry Margin="35,5,0,0" x:Name="etr_FirstName" Placeholder="Имя"
+                <customentry:CustomEntry Margin="0,10,0,0" x:Name="etr_FirstName" Placeholder="Имя"
                HorizontalTextAlignment="Start"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Отчество"
+                Margin="0,5,0,0"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Start"/>
-                <customentry:CustomEntry Margin="0,10,0,0" x:Name="etr_Patronymic" Placeholder="Отчество"
+                <customentry:CustomEntry Margin="0,5,0,0" x:Name="etr_Patronymic" Placeholder="Отчество"
                HorizontalTextAlignment="Start"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Телефон"
+                Margin="0,10,0,0"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Start"/>
-                <customentry:CustomEntry Margin="5,15,0,0" x:Name="etr_PhoneNumber" Placeholder="Телефон"
+                <customentry:CustomEntry Margin="0,10,0,0" x:Name="etr_PhoneNumber" Placeholder="Телефон"
                HorizontalTextAlignment="Start"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="E-mail"
+                Margin="0,10,0,0"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Start"/>
-                <customentry:CustomEntry Margin="30,5,0,0" x:Name="etr_Email" Placeholder="E-mail"
+                <customentry:CustomEntry Margin="0,10,0,0" x:Name="etr_Email" Placeholder="E-mail"
                HorizontalTextAlignment="Start"/>
             </StackLayout>
 
-            <Button x:Name="btn_SaveProfile" Text="Сохранить данные"
-                Margin="0,40,0,0"
+            <Button x:Name="btn_SaveProfile" Text="Сохранить данные" 
+                Margin="0,40,10,0"
                 BackgroundColor="#FB6A18"
                 WidthRequest="220"
                 HeightRequest="35"
                 TextColor="White"
                 HorizontalOptions="Center"/>
-            <StackLayout Orientation="Horizontal" Margin="0, 14,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,14,0,0">
             </StackLayout>
             <StackLayout Margin="0, 120">
 
             </StackLayout>
         </StackLayout>
+        
         <Line X1="0"
-              Y1="65"
+              Y1="165"
               X2="412"
-              Y2="65"
+              Y2="165"
               Stroke="Gray"
               StrokeThickness="1"/>
         <Line X1="0"
-              Y1="125"
+              Y1="225"
               X2="412"
-              Y2="125"
+              Y2="225"
               Stroke="Gray"
               StrokeThickness="1"/>
         <Line X1="0"
-              Y1="185"
+              Y1="285"
               X2="412"
-              Y2="185"
+              Y2="285"
               Stroke="Gray"
               StrokeThickness="1"/>
         <Line X1="0"
-              Y1="245"
+              Y1="345"
               X2="412"
-              Y2="245"
+              Y2="345"
               Stroke="Gray"
               StrokeThickness="1"/>
         <Line X1="0"
-              Y1="305"
+              Y1="405"
               X2="412"
-              Y2="305"
-              Stroke="Gray"
-              StrokeThickness="1"/>
-        <Line X1="0"
-              Y1="365"
-              X2="412"
-              Y2="365"
+              Y2="405"
               Stroke="Gray"
               StrokeThickness="1"/>
     </Grid>

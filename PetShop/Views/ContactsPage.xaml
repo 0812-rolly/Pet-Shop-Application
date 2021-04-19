@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="White" 
              x:Class="PetShop.Views.ContactsPage">
+
+    <ContentPage.Content>
     <StackLayout Orientation="Vertical">
         <StackLayout>
-            <Image Source="logo.png" WidthRequest="100" HeightRequest="50"/>
+            <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
         </StackLayout>
         <Line X1="0"
               Y1="0"
@@ -71,5 +73,5 @@
                 FontFamily="Montserrat"/>
         </StackLayout>
     </StackLayout>
-
+        </ContentPage.Content>
 </ContentPage>

@@ -5,10 +5,12 @@ using Xamarin.Forms;
 
 namespace PetShop.Views
 {
-    public partial class MenuPage : ContentPage
+    public partial class AppShell : Shell
     {
-        public MenuPage()
+
+        public AppShell()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }
