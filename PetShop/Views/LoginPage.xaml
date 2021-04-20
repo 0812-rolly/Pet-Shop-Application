@@ -23,8 +23,9 @@
         <Button x:Name="btn_Login" Text="Получить код"
                 Margin="0,20,0,0"
                 BackgroundColor="#FB6A18"
+                CornerRadius="9"
                 WidthRequest="220"
-                HeightRequest="35"
+                HeightRequest="40"
                 TextColor="White"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked"/>

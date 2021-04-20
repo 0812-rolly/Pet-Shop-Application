@@ -26,7 +26,8 @@
 
         <Button Text="Продолжить"
                 WidthRequest="220"
-                HeightRequest="35"
+                HeightRequest="40"
+                CornerRadius="9"
                 Margin="20"
                 BackgroundColor="#FB6A18"
                 TextColor="White"

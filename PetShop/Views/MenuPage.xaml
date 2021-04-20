@@ -1,22 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetShop.Views.MenuPage"
-             Title="Menu">
-             
-    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
-        <ListView x:Name="ListViewMenu"
-                    HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Label Text="{Binding Title}" FontSize="20"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetShop.Views.MenuPage">
 
+    <StackLayout>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+            </StackLayout>
+            <Line X1="0"
+            Y1="0"
+            X2="412"
+            Y2="0"
+            Stroke="Gray"
+            StrokeThickness="1"/>
+        </StackLayout>
+
+        <Label Text="Товары для животных"
+  FontFamily="Open Sans"
+  Margin="40,25,0,20"
+  FontSize="23"
+  TextColor="Black"
+  FontAttributes="Bold"
+  VerticalOptions="Start" 
+  HorizontalTextAlignment="Start"/>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image x:Name="Cats" Aspect="AspectFit" Margin="30,7,0,5" />
+            <Image x:Name="Dogs" Aspect="AspectFit" Grid.Column="1" Margin="0,7,30,5"/>
+            <Image x:Name="Birds" Aspect="AspectFit" Grid.Row="1" Margin="30,7,0,5" />
+            <Image x:Name="Rodents" Aspect="AspectFit" Grid.Row="1"
+                 Grid.Column="1" Margin="0,7,30,5" />
+        </Grid>
+
+    </StackLayout>
 </ContentPage>

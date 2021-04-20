@@ -14,6 +14,7 @@ namespace PetShop.Views
     {
         public LoginSuccessPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }
