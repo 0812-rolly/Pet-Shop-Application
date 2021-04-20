@@ -1,27 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetShop.Views.LoginPage"
+             x:Class="PetShop.Views.LoginConfirmPage"
              BackgroundColor="White" 
              BackgroundImageSource="paws.png">
-    
     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
         <StackLayout>
             <Image Source="logo.png" WidthRequest="234" HeightRequest="84" Margin="0,30"/>
         </StackLayout>
-        <Label Text="Регистрация аккаунта"
-                FontSize="23"
-                FontAttributes="Bold"
+        <Label Text="Введите код из SMS"
+                FontSize="20"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         <StackLayout Margin="10">
 
         </StackLayout>
-        <Entry x:Name="etr_PhoneNumber" Placeholder="Номер телефона" MaxLength="11"
+
+        <Entry x:Name="etr_SmsCode" Placeholder="Код из SMS" MaxLength="11"
                HorizontalTextAlignment="Center"/>
-        <Button x:Name="btn_Login" Text="Получить код"
-                Margin="0,20,0,0"
+        <Button x:Name="btn_Login" Text="Подтвердить"
+                Margin="0,40,0,0"
                 BackgroundColor="#FB6A18"
                 WidthRequest="220"
                 HeightRequest="35"
@@ -29,16 +28,10 @@
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked"/>
         <StackLayout Orientation="Horizontal" Margin="0, 14,0,80">
-            <CheckBox x:Name="Cb_Agreement" Color="Gray"/>
-            <Label Text="Я согласен с условиями регистрации" Margin="0,5,0,0"
-                   TextColor="Black"
-                   FontFamily="Comic Sans MS"
-                   FontSize="15"/>
 
         </StackLayout>
         <StackLayout Margin="0, 70">
-            
+
         </StackLayout>
     </StackLayout>
-    
 </ContentPage>
