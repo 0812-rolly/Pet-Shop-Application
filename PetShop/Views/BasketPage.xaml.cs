@@ -9,6 +9,7 @@ namespace PetShop.Views
     {
         public BasketPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

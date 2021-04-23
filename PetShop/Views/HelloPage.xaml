@@ -32,7 +32,8 @@
                 BackgroundColor="#FB6A18"
                 TextColor="White"
                 FontSize="12"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
 
         </StackLayout>
 </ContentPage>

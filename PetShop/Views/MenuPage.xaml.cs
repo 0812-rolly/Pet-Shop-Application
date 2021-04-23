@@ -9,6 +9,7 @@ namespace PetShop.Views
     {
         public MenuPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
             Cats.Source = "Cats.png";

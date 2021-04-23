@@ -10,17 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace PetShop.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginSuccessPage : ContentPage
+    public partial class TabbedMenu : TabbedPage
     {
-        public LoginSuccessPage()
+        public TabbedMenu()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-        }
 
-        private async void btn_Proceed_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new TabbedMenu());
+            BarTextColor = Color.FromHex("#a3a19e");
+            SelectedTabColor = Color.FromHex("#FB6A18");
+            UnselectedTabColor = Color.FromHex("#a3a19e");
         }
     }
 }

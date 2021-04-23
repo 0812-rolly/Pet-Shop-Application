@@ -30,7 +30,8 @@
                 HeightRequest="40"
                 FontSize="13"
                 TextColor="White"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Clicked="btn_Proceed_Clicked"/>
         
         <StackLayout Margin="0, 100">
 
