@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:PetShop.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+             x:Class="PetShop.Views.TabbedMenu">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <NavigationPage Title="Главная" IconImageSource="Home.png">
+            <x:Arguments>
+                <views:MenuPage/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Профиль" IconImageSource="Profile.png">
+            <x:Arguments>
+                <views:UserPage/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Корзина" IconImageSource="Basket.png">
+            <x:Arguments>
+                <views:BasketPage/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Контакты" IconImageSource="Contacts.png">
+            <x:Arguments>
+                <views:ContactsPage/>
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+    
+</TabbedPage>
