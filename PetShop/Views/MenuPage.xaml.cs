@@ -17,5 +17,15 @@ namespace PetShop.Views
             Birds.Source = "Birds.png";
             Rodents.Source = "Rodents.png";
         }
+
+        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        {
+            GotoPage();
+        }
+
+        public async void GotoPage()
+        {
+            await Navigation.PushAsync(new LoginConfirmPage());
+        }
     }
 }

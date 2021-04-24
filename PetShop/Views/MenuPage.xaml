@@ -37,7 +37,12 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Image x:Name="Cats" Aspect="AspectFit" Margin="30,7,0,5" />
+            <Image x:Name="Cats" Aspect="AspectFit" Margin="30,7,0,5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
             <Image x:Name="Dogs" Aspect="AspectFit" Grid.Column="1" Margin="0,7,30,5"/>
             <Image x:Name="Birds" Aspect="AspectFit" Grid.Row="1" Margin="30,7,0,5" />
             <Image x:Name="Rodents" Aspect="AspectFit" Grid.Row="1"

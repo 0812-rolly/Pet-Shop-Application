@@ -32,9 +32,4 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Views\AppShell.xaml.cs">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
-  </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@ namespace PetShop.Views
     {
         public LoginConfirmPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 
@@ -28,7 +29,10 @@ namespace PetShop.Views
             }
 
             if (error == false)
+            {
                 await Navigation.PushAsync(new LoginSuccessPage());
+            }
+                
         }
     }
 }

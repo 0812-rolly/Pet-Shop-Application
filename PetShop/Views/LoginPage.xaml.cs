@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PetShop.Models;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,7 +24,8 @@ namespace PetShop.Views
         {
             bool error = false;
 
-            if (etr_PhoneNumber.Text == null || etr_PhoneNumber.Text == "")
+            if (etr_PhoneNumber.Text == null || etr_PhoneNumber.Text == "" ||
+                etr_PhoneNumber.Text.Length < 11)
             {
                 etr_PhoneNumber.PlaceholderColor = Color.FromHex("#f56b62");
                 error = true;
@@ -35,7 +37,10 @@ namespace PetShop.Views
             }
 
             if (error == false)
+            {
+                Models.User.Phone = etr_PhoneNumber.Text;
                 await Navigation.PushAsync(new LoginConfirmPage());
+            }
         }
     }
 }
