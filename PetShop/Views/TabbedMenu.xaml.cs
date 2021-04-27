@@ -20,6 +20,7 @@ namespace PetShop.Views
             BarTextColor = Color.FromHex("#a3a19e");
             SelectedTabColor = Color.FromHex("#FB6A18");
             UnselectedTabColor = Color.FromHex("#a3a19e");
+            
         }
     }
 }

@@ -18,14 +18,48 @@ namespace PetShop.Views
             Rodents.Source = "Rodents.png";
         }
 
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+
+
+        void TapGestureRecognizer_Tapped_Cats(System.Object sender, System.EventArgs e)
         {
-            GotoPage();
+            GotoPageCats();
         }
 
-        public async void GotoPage()
+        void TapGestureRecognizer_Tapped_Dogs(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new LoginConfirmPage());
+            GotoPageDogs();
+        }
+
+        void TapGestureRecognizer_Tapped_Birds(System.Object sender, System.EventArgs e)
+        {
+            GotoPageBirds();
+        }
+
+        void TapGestureRecognizer_Tapped_Rodents(System.Object sender, System.EventArgs e)
+        {
+            GotoPageRodents();
+        }
+
+
+
+        public async void GotoPageCats()
+        {
+            await Navigation.PushAsync(new Menu_cats());
+        }
+
+        public async void GotoPageDogs()
+        {
+            await Navigation.PushAsync(new Menu_dogs());
+        }
+
+        public async void GotoPageBirds()
+        {
+            await Navigation.PushAsync(new Menu_birds());
+        }
+
+        public async void GotoPageRodents()
+        {
+            await Navigation.PushAsync(new Menu_rodents());
         }
     }
 }

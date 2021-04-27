@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetShop.Views.Menu_cats">
+
+<Grid>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+            </StackLayout>
+            <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        </StackLayout>
+
+        <Label Text="Товары для кошек"
+                FontSize="23"
+                TextColor="Black"
+                FontAttributes="Bold"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Start"
+                Margin="40, 120, 0, 30"/>
+
+        <StackLayout Orientation="Vertical" Margin="105,210,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,0,20,0">
+                <Label Text="Сухой корм"
+                Margin="0,0,0,0"
+                FontFamily="Open Sans"
+                FontSize="21"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
+                <Label Text="Влажный корм"
+                Margin="0,0,0,0"
+                FontFamily="Open Sans"
+                FontSize="21"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
+                <Label Text="Игрушки и аксессуары"
+                Margin="0,0,0,0"
+                FontFamily="Open Sans"
+                FontSize="21"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
+                <Label Text="Лекарства и витамины"
+                Margin="0,0,0,0"
+                FontFamily="Open Sans"
+                FontSize="21"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout  Orientation="Vertical" Margin="20,195,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,0,20,0">
+                <Image Source="Food" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
+                <Image Source="Food_2" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
+                <Image Source="Joy" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
+                <Image Source="Vitamins" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+            </StackLayout>
+        </StackLayout>
+
+
+
+        <StackLayout  Orientation="Vertical" Margin="365,195,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,15,20,0">
+                <Image x:Name="arrow_food" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center" ></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
+                <Image x:Name="arrow_food2" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
+                <Image x:Name="arrow_joy" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
+                <Image x:Name="arrow_vitamins" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+            </StackLayout>
+        </StackLayout>
+
+
+        <Line X1="0"
+              Y1="185"
+              X2="412"
+              Y2="185"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="265"
+              X2="412"
+              Y2="265"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="345"
+              X2="412"
+              Y2="345"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="425"
+              X2="412"
+              Y2="425"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <Line X1="0"
+              Y1="505"
+              X2="412"
+              Y2="505"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+
+    </Grid>
+
+</ContentPage>
