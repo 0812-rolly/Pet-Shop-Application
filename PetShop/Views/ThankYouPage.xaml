@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImageSource="Background.png"
+    x:Class="PetShop.Views.ThankYouPage">
+
+    <Grid>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+            </StackLayout>
+            <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+
+            <Label Text="Поздравляем с успешной покупкой!"
+               FontSize="25"
+               FontFamily="Open Sans"
+               TextColor="#F54A00"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               Margin="80,130,80,0"/>
+
+            <Label Text="Электронный чек отправлен на почту, указанную в Вашем личном кабинете."
+               FontSize="16"
+               FontFamily="Open Sans"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               Margin="75,25,75,0"/>
+
+            <Image Source="Thank_cat" WidthRequest="240" HeightRequest="240" Margin="0,27,0,0"></Image>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -11839,16 +11839,19 @@ namespace PetShop.Droid
 			public const int test_custom_background = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_dark = 2131165345;
+			public const int Thank_cat = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int tooltip_frame_light = 2131165346;
+			public const int tooltip_frame_dark = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int Vitamins = 2131165347;
+			public const int tooltip_frame_light = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int xamarin_logo = 2131165348;
+			public const int Vitamins = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int xamarin_logo = 2131165349;
 			
 			static Drawable()
 			{
