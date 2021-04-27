@@ -4,7 +4,7 @@
              x:Class="PetShop.Views.LoginPage"
              BackgroundColor="White" 
              BackgroundImageSource="paws.png">
-    
+
     <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="15">
         <StackLayout>
             <Image Source="logo.png" WidthRequest="234" HeightRequest="84" Margin="0,30"/>
@@ -20,6 +20,15 @@
         </StackLayout>
         <Entry x:Name="etr_PhoneNumber" Placeholder="Номер телефона" MaxLength="11"
                HorizontalTextAlignment="Center" Keyboard="Telephone"/>
+
+        <StackLayout Orientation="Horizontal" Margin="15,20,0,15">
+            <CheckBox x:Name="Cb_Agreement" Color="Gray"/>
+            <Label Text="Я согласен с условиями регистрации" Margin="0,5,0,0"
+                   TextColor="Black"
+                   FontFamily="Comic Sans MS"
+                   FontSize="15"/>
+        </StackLayout>
+
         <Button x:Name="btn_Login" Text="Получить код"
                 Margin="0,20,0,0"
                 BackgroundColor="#FB6A18"
@@ -29,17 +38,11 @@
                 TextColor="White"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked"/>
-        <StackLayout Orientation="Horizontal" Margin="0, 14,0,80">
-            <CheckBox x:Name="Cb_Agreement" Color="Gray"/>
-            <Label Text="Я согласен с условиями регистрации" Margin="0,5,0,0"
-                   TextColor="Black"
-                   FontFamily="Comic Sans MS"
-                   FontSize="15"/>
+
+
+        <StackLayout Margin="0, 70">
 
         </StackLayout>
-        <StackLayout Margin="0, 70">
-            
-        </StackLayout>
     </StackLayout>
-    
+
 </ContentPage>
