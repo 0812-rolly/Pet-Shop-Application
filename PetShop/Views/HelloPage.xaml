@@ -4,9 +4,9 @@
              x:Class="PetShop.Views.HelloPage"
              BackgroundImageSource="Background.png">
 
-    <StackLayout Orientation="Vertical" Margin="15">
+    <StackLayout Orientation="Vertical" Margin="10">
         
-        <Image Source="Logo.png" WidthRequest="234" HeightRequest="84" Margin="0,30"></Image>
+        <Image Source="Logo.png" WidthRequest="234" HeightRequest="84" Margin="0,20"></Image>
         <Image Source="Dog_photo" WidthRequest="200" HeightRequest="200"></Image>
 
         <Label Text="Добро пожаловать в зоомагазин “Happy Pets”"
@@ -22,13 +22,13 @@
                FontFamily="Open Sans"
                TextColor="Black"
                HorizontalTextAlignment="Center"
-               Margin="40,15"/>
+               Margin="35,5"/>
 
         <Button Text="Продолжить"
                 WidthRequest="220"
                 HeightRequest="40"
                 CornerRadius="9"
-                Margin="20"
+                Margin="25"
                 BackgroundColor="#FB6A18"
                 TextColor="White"
                 FontSize="12"
