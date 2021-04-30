@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetShop.Views.Ordering">
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Frame BorderColor="#F3F2F1"
+                   BackgroundColor="#F3F2F1"
+                   HasShadow="False"
+                   HeightRequest="120"
+                   WidthRequest="120"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="10">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                    <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Grid Margin="4"
+                      WidthRequest="100">
+                    <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="End"
+                          VerticalOptions="Start">
+                        <Ellipse Stroke="#F54A00"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        <Ellipse x:Name="check"
+                                 Fill="#F54A00"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                    </Grid>
+                    <ContentPresenter />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+            </StackLayout>
+            <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical">
+            <Label Text="Выберите способ оплаты"
+               FontSize="18"
+               FontFamily="Open Sans"
+               TextColor="Black"
+               HorizontalTextAlignment="Start"
+               FontAttributes="Bold"
+               Margin="40,115,100,0"/>
+
+            <StackLayout RadioButtonGroup.GroupName="payment"
+                 Orientation="Horizontal" Margin="40,10,0,0">
+                <RadioButton Value="Cash">
+                    <RadioButton.Content>
+                        <StackLayout>
+                            <Image Source="Cash.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" WidthRequest="70" HeightRequest="70"/>
+                            <Label Text="Наличными"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" FontSize="17"/>
+                        </StackLayout>
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton Value="Card">
+                    <RadioButton.Content>
+                        <StackLayout>
+                            <Image Source="Card.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" WidthRequest="70" HeightRequest="70"/>
+                            <Label Text="Картой"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" FontSize="17"/>
+                        </StackLayout>
+                    </RadioButton.Content>
+                </RadioButton>
+            </StackLayout>
+        </StackLayout>
+
+        <Label Text="Ваш заказ будет доставлен по адресу:"
+               FontSize="18"
+               FontFamily="Open Sans"
+               TextColor="Black"
+               HorizontalTextAlignment="Start"
+               FontAttributes="Bold"
+               Margin="40,335,80,0"/>
+
+        <Label Text="Саратовская область, г. Саратов, ул. Кутякова 134"
+               FontSize="15"
+               FontFamily="Open Sans"
+               TextColor="Black"
+               HorizontalTextAlignment="Start"
+               Margin="40,395,80,0"/>
+
+        <StackLayout>
+            <Button x:Name="btn_Ordering" Text="Оплатить заказ"
+                Margin="0,480,0,0"
+                BackgroundColor="#FB6A18"
+                CornerRadius="9"
+                WidthRequest="270"
+                HeightRequest="40"
+                FontSize="13"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Clicked="btn_Ordering_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
