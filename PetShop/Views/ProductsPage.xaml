@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:PetShop.ViewModels"
+             x:Class="PetShop.Views.ProductsPage"
+             x:Name="PetType">
+    <ContentPage.BindingContext>
+        <viewmodel:ProductViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <!--<Button x:Name="btn_Proceed" Text="Aboba"
+                Margin="0,70,0,0"
+                BackgroundColor="#FB6A18"
+                CornerRadius="9"
+                WidthRequest="20"
+                HeightRequest="40"
+                FontSize="13"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Clicked="{Binding Refresh}"/>-->
+        <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid
+                         Padding="10"
+                         ColumnDefinitions="Auto,*"
+                         RowDefinitions="Auto, *">
+                        <Label
+                             Grid.Column="1"
+                             FontAttributes="Bold"
+                             Text="{Binding Id}" />
+                        <Label
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             FontAttributes="Bold"
+                             Text="{Binding ShortDescription}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
