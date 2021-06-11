@@ -17,28 +17,28 @@ namespace PetShop.Models
         }
 
         [PrimaryKey, AutoIncrement]
-        public int id { get; set; }
-        public string name { get; set; }
-        public string petType { get; set; }
-        public string group { get; set; }
-        public string shortDescription { get; set; }
-        public string longDescription { get; set; }
-        public string composition { get; set; }
-        public int weight { get; set; }
-        public int price { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string PetType { get; set; }
+        public string Group { get; set; }
+        public string ShortDescription { get; set; }
+        public string LongDescription { get; set; }
+        public string Composition { get; set; }
+        public int Weight { get; set; }
+        public int Price { get; set; }
         public int InStock { get; set; }
 
         public Product(int id, string name, string petType, string group, string shortDescription, string longDescription, string composition, int weight, int price, int inStock)
         {
-            this.id = id;
-            this.name = name;
-            this.petType = petType;
-            this.group = group;
-            this.shortDescription = shortDescription;
-            this.longDescription = longDescription;
-            this.composition = composition;
-            this.weight = weight;
-            this.price = price;
+            this.Id = id;
+            this.Name = name;
+            this.PetType = petType;
+            this.Group = group;
+            this.ShortDescription = shortDescription;
+            this.LongDescription = longDescription;
+            this.Composition = composition;
+            this.Weight = weight;
+            this.Price = price;
             InStock = inStock;
         }
 

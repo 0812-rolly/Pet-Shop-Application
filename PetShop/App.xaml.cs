@@ -22,7 +22,7 @@ namespace PetShop
 
             DoShit();
 
-            NavigationPage np = new NavigationPage(new ProductsPage("Кошки", "Влажный корм"));
+            NavigationPage np = new NavigationPage(new HelloPage());
 
             MainPage = np;
         }
@@ -30,20 +30,20 @@ namespace PetShop
         public async void DoShit()
         {
             Product prod1 = new Product();
-            prod1.group = "Влажный корм";
-            prod1.petType = "Кошки";
-            prod1.name = "CHEATOS";
+            prod1.Group = "Влажный корм";
+            prod1.PetType = "Кошки";
+            prod1.Name = "CHEATOS";
 
 
             Product prod2 = new Product();
-            prod2.group = "Влажный корм";
-            prod2.petType = "Кошки";
-            prod2.name = "HAMBO";
+            prod2.Group = "Влажный корм";
+            prod2.PetType = "Кошки";
+            prod2.Name = "HAMBO";
 
             Product prod3 = new Product();
-            prod3.group = "Влажный корм";
-            prod3.petType = "Кошки";
-            prod3.name = "ABOBA";
+            prod3.Group = "Влажный корм";
+            prod3.PetType = "Кошки";
+            prod3.Name = "ABOBA";
 
             productLogic.IncreaseProductAsync(prod1);
             productLogic.IncreaseProductAsync(prod2);

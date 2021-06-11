@@ -44,7 +44,7 @@ namespace PetShop
         {
             await Init();
 
-            var products = Database.Table<Product>().Where(x => x.group == group && x.petType == petType);
+            var products = Database.Table<Product>().Where(x => x.Group == group && x.PetType == petType);
 
             List<Product> result = await products.ToListAsync();
 

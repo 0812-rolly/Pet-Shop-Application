@@ -53,16 +53,5 @@ namespace PetShop.ViewModels
             Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
             return;
         }
-
-        //public ICommand Refresh
-        //{
-        //    get
-        //    {
-        //        return new Command(async () =>
-        //        {
-        //            Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
-        //        });
-        //    }
-        //}
     }
 }
