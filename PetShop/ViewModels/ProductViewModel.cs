@@ -8,26 +8,29 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using PetShop.BLL;
 using System.IO;
+using System.ComponentModel;
 //using MvvmHelpers.Commands;
 
 namespace PetShop.ViewModels
 {
-    class ProductViewModel
+    class ProductViewModel : INotifyPropertyChanged
     {
         public List<Product> products;
 
         public IProductLogic productLogic;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
         public ProductViewModel()
         {
             productLogic = new ProductLogic();
-            //using (StreamWriter sr = new StreamWriter("../output.txt"))
-            //{
-            //    sr.WriteLine("wewew");
-            //}
 
-            ICommand com = this.Refresh;
-
+            Task.Run(()=>Refresh());
         }
 
         public List<Product> Products
@@ -35,27 +38,31 @@ namespace PetShop.ViewModels
             get { return products; }
             set
             {
-                products = value;
-            }
-        }
-
-        //async Task Refresh()
-        //{
-        //    throw new Exception("wwww");
-
-        //    Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
-        //}
-
-        public ICommand Refresh
-        {
-            get
-            {
-                return new Command(async () =>
+                if (products != value)
                 {
-                    throw new Exception("Here's JohnnY!");
-                    Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
-                });
+                    products = value;
+                    OnPropertyChanged(nameof(Products));
+                }
             }
         }
+
+
+
+        public async void Refresh()
+        {
+            Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
+            return;
+        }
+
+        //public ICommand Refresh
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //        {
+        //            Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);
+        //        });
+        //    }
+        //}
     }
 }

@@ -23,9 +23,9 @@ namespace PetShop.BLL
             return products;
         }
 
-        public Task<bool> IncreaseProductAsync(Product product)
+        public void IncreaseProductAsync(Product product)
         {
-            throw new NotImplementedException();
+            PetShopDatabase.InsertProduct(product);
         }
 
         public Task<bool> ReduceProductAsync(Product product)

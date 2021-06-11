@@ -11,15 +11,22 @@ namespace PetShop
 {
     public class PetShopDatabase
     {
-        static SQLiteAsyncConnection Database;
+        public static SQLiteAsyncConnection Database;
 
         static async Task Init()
         {
             if (Database != null)
                 return;
 
-            string DatabasePath = "PetShopDB.db";
-            Database = new SQLiteAsyncConnection(DatabasePath);
+            //string databasePath = "PetShop.db";
+            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PetShop.db");
+
+            if (File.Exists(databasePath))
+                File.Delete(databasePath);
+
+            Database = new SQLiteAsyncConnection(databasePath, SQLiteOpenFlags.Create | SQLiteOpenFlags.FullMutex | SQLiteOpenFlags.ReadWrite);
+
+            Database.CreateTableAsync<Product>().Wait();
 
             //await Database.CreateTableAsync<Product>();
         }
@@ -39,9 +46,18 @@ namespace PetShop
 
             var products = Database.Table<Product>().Where(x => x.group == group && x.petType == petType);
 
-            var result = products.ToListAsync();
+            List<Product> result = await products.ToListAsync();
 
-            return await result;
+            return result;
+        }
+
+        public static async void InsertProduct(Product product)
+        {
+            await Init();
+
+            int result = await Database.InsertAsync(product);
+
+            List<Product> products = await Database.Table<Product>().ToListAsync();
         }
     }
 }

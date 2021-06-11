@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace PetShop.Models
 {
     [Table("Product")]
-    public class Product
+    public class Product : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string name { get; set; }

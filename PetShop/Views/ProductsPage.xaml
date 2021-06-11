@@ -28,11 +28,13 @@
                         <Label
                              Grid.Column="1"
                              FontAttributes="Bold"
-                             Text="{Binding Id}" />
+                             TextColor="DarkBlue"
+                             Text="{Binding Name}" />
                         <Label
                              Grid.Row="1"
                              Grid.Column="1"
                              FontAttributes="Bold"
+                             TextColor="DarkBlue"
                              Text="{Binding ShortDescription}" />
                     </Grid>
                 </DataTemplate>

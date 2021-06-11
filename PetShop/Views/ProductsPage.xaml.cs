@@ -13,6 +13,11 @@ namespace PetShop.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductsPage : ContentPage
     {
+        public ProductsPage()
+        {
+            InitializeComponent();
+        }
+
         public ProductsPage(string petType_, string group)
         {
             PropertyController.PetType = petType_;
