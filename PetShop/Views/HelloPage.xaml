@@ -7,7 +7,7 @@
     <StackLayout Orientation="Vertical" Margin="10">
         
         <Image Source="Logo.png" WidthRequest="234" HeightRequest="84" Margin="0,20"></Image>
-        <Image Source="Dog_photo" WidthRequest="200" HeightRequest="200"></Image>
+        <Image Source="floppa" WidthRequest="200" HeightRequest="200"></Image>
 
         <Label Text="Добро пожаловать в зоомагазин “Happy Pets”"
                FontSize="25"

@@ -33,7 +33,8 @@
                 FontSize="21"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Start"/>
+                HorizontalTextAlignment="Start">
+                </Label>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
@@ -43,7 +44,8 @@
                 FontSize="21"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Center"/>
+                HorizontalTextAlignment="Center">
+                </Label>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
@@ -53,7 +55,8 @@
                 FontSize="21"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Start"/>
+                HorizontalTextAlignment="Start">
+                </Label>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
@@ -63,7 +66,8 @@
                 FontSize="21"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Start"/>
+                HorizontalTextAlignment="Start">
+                </Label>
             </StackLayout>
         </StackLayout>
 
@@ -89,19 +93,39 @@
 
         <StackLayout  Orientation="Vertical" Margin="365,195,0,0">
             <StackLayout Orientation="Horizontal" Margin="0,15,20,0">
-                <Image x:Name="arrow_food" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center" ></Image>
+                <Image x:Name="arrow_food" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_DryFood"
+                                          NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
-                <Image x:Name="arrow_food2" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+                <Image x:Name="arrow_food2" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_WetFood"
+                                          NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
-                <Image x:Name="arrow_joy" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+                <Image x:Name="arrow_joy" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Toys"
+                                          NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
-                <Image x:Name="arrow_vitamins" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
+                <Image x:Name="arrow_vitamins" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Medicine"
+                                          NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
         </StackLayout>
 
