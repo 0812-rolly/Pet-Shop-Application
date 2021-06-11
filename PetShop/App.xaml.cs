@@ -22,7 +22,7 @@ namespace PetShop
 
             DoShit();
 
-            NavigationPage np = new NavigationPage(new HelloPage());
+            NavigationPage np = new NavigationPage(new LoginSuccessPage());
 
             MainPage = np;
         }
