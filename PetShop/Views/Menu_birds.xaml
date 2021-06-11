@@ -37,23 +37,13 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
-                <Label Text="Влажный корм"
-                Margin="0,0,0,0"
-                FontFamily="Open Sans"
-                FontSize="21"
-                TextColor="Black"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Center"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
                 <Label Text="Игрушки и аксессуары"
                 Margin="0,0,0,0"
                 FontFamily="Open Sans"
                 FontSize="21"
                 TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalTextAlignment="Start"/>
+                HorizontalTextAlignment="Center"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,45,20,0">
@@ -65,23 +55,20 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Start"/>
             </StackLayout>
+
         </StackLayout>
 
         <StackLayout  Orientation="Vertical" Margin="20,195,0,0">
             <StackLayout Orientation="Horizontal" Margin="0,0,20,0">
-                <Image Source="Food" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+                <Image Source="bird_food" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
-                <Image Source="Food_2" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+                <Image Source="bird_Joy" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
-                <Image Source="Joy" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="0,20,20,0">
-                <Image Source="Vitamins" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
+                <Image Source="bird_Vitamins" WidthRequest="55" HeightRequest="55" VerticalOptions="Center"></Image>
             </StackLayout>
         </StackLayout>
 
@@ -90,10 +77,6 @@
         <StackLayout  Orientation="Vertical" Margin="365,195,0,0">
             <StackLayout Orientation="Horizontal" Margin="0,15,20,0">
                 <Image x:Name="arrow_food" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center" ></Image>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
-                <Image x:Name="arrow_food2" Source="arrow" WidthRequest="18" HeightRequest="33" VerticalOptions="Center"></Image>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,40,20,0">
@@ -130,12 +113,12 @@
               Y2="425"
               Stroke="Gray"
               StrokeThickness="1"/>
-        <Line X1="0"
+        <!--<Line X1="0"
               Y1="505"
               X2="412"
               Y2="505"
               Stroke="Gray"
-              StrokeThickness="1"/>
+              StrokeThickness="1"/>-->
 
     </Grid>
 </ContentPage>

@@ -11646,68 +11646,68 @@ namespace PetShop.Droid
 			// aapt resource value: 0x7F070060
 			public const int Basket = 2131165280;
 			
+			// aapt resource value: 0x7F070064
+			public const int Birds = 2131165284;
+			
 			// aapt resource value: 0x7F070061
-			public const int Birds = 2131165281;
+			public const int bird_food = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int btn_checkbox_checked_mtrl = 2131165282;
+			public const int bird_Joy = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165283;
-			
-			// aapt resource value: 0x7F070064
-			public const int btn_checkbox_unchecked_mtrl = 2131165284;
+			public const int bird_Vitamins = 2131165283;
 			
 			// aapt resource value: 0x7F070065
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165285;
+			public const int btn_checkbox_checked_mtrl = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int btn_radio_off_mtrl = 2131165286;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165287;
+			public const int btn_checkbox_unchecked_mtrl = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int btn_radio_on_mtrl = 2131165288;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165289;
+			public const int btn_radio_off_mtrl = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Card = 2131165290;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int Cash = 2131165291;
+			public const int btn_radio_on_mtrl = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int Cats = 2131165292;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int Contacts = 2131165293;
+			public const int Card = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int design_bottom_navigation_item_background = 2131165294;
+			public const int Cash = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_fab_background = 2131165295;
+			public const int Cats = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int design_ic_visibility = 2131165296;
+			public const int Contacts = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int design_ic_visibility_off = 2131165297;
+			public const int design_bottom_navigation_item_background = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int design_password_eye = 2131165298;
+			public const int design_fab_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int design_snackbar_background = 2131165299;
-			
-			// aapt resource value: 0x7F070075
-			public const int Dogs = 2131165301;
+			public const int design_ic_visibility = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int Dog_photo = 2131165300;
+			public const int design_ic_visibility_off = 2131165300;
+			
+			// aapt resource value: 0x7F070075
+			public const int design_password_eye = 2131165301;
 			
 			// aapt resource value: 0x7F070076
 			public const int floppa = 2131165302;
@@ -11717,6 +11717,9 @@ namespace PetShop.Droid
 			
 			// aapt resource value: 0x7F070078
 			public const int Food_2 = 2131165304;
+			
+			// aapt resource value: 0x7F070077
+			public const int Dog_photo = 2131165303;
 			
 			// aapt resource value: 0x7F070079
 			public const int Home = 2131165305;
