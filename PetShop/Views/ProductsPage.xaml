@@ -5,10 +5,10 @@
              x:Class="PetShop.Views.ProductsPage"
              BackgroundColor="White" 
              x:Name="PetType">
-
-    <ContentPage.BindingContext>
+        <ContentPage.BindingContext>
         <viewmodel:ProductViewModel/>
     </ContentPage.BindingContext>
+    
     <StackLayout>
         <StackLayout>
             <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
@@ -19,7 +19,7 @@
               Y2="0"
               Stroke="Gray"
               StrokeThickness="1"/>
-
+        <ScrollView>
         <CollectionView ItemsSource="{Binding Products}" 
                         SelectionMode="Single"
                         SelectionChanged="CollectionView_SelectionChanged">
@@ -83,5 +83,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        </ScrollView>
     </StackLayout>
 </ContentPage>

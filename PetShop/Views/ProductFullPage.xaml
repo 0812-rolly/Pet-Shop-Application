@@ -3,12 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetShop.Views.ProductFullPage"
              Background="White">
-
-    <ContentPage.Content>
+    <StackLayout>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
         </StackLayout>
-    </ContentPage.Content>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+        <ScrollView>
+            <StackLayout>
+
+                <Image x:Name="img" WidthRequest="270" HeightRequest="270"
+                               VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0"></Image>
+
+                <Label x:Name="name_label"
+                             Padding="37, 0, 0, 0"
+                             FontAttributes="Bold"
+                             TextColor="Black"
+                             FontSize="21"/>
+
+                <Label x:Name="shortDesc_Label"
+                             Padding="37, 0, 0, 0"
+                             FontSize="17"
+                             TextColor="Black" />
+                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto, *">
+                    <Label x:Name="weight_label"
+                             Grid.Column="1"
+                             Padding="32, 25, 0, 0"
+                             FontSize="17"
+                             TextColor="#767676"
+                             />
+
+                    <Label x:Name="instock_label"
+                             Grid.Column="1"
+                             Padding="32, 55, 0, 0"
+                             FontSize="17"
+                             TextColor="#71BD6F"
+                             />
+
+                    <Label x:Name="price_label"
+                             Grid.Column="2"
+                             Padding="50, 25, 0, 0"
+                           FontAttributes="Bold"
+                             FontSize="35"
+                             TextColor="Black"
+                             />
+                </Grid>
+
+                <Button Text="В корзину"
+                WidthRequest="250"
+                HeightRequest="40"
+                CornerRadius="9"
+                Margin="17"
+                BackgroundColor="#FB6A18"
+                TextColor="White"
+                FontSize="13"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+
+                <Label
+                    Text="Описание:"
+                    FontSize="19"
+                    Padding="37,10,0,0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Start"
+                    />
+
+
+                <Label x:Name="longDesc_label"
+                             Padding="37, 5, 25, 0"
+                             FontSize="16"
+                             TextColor="Black"
+                             />
+
+                <Label
+                    Text="Состав:"
+                    FontSize="19"
+                    TextColor="Black"
+                    Padding="37,20,0,0"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Start"
+                    />
+
+                
+                <Label x:Name="composition_label"
+                             Padding="37, 5, 25, 60"
+                             FontSize="15"
+                             TextColor="Black"
+                             />
+
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>

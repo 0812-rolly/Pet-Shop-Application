@@ -28,7 +28,19 @@ namespace PetShop.Views
 
         private void SetFields()
         {
-            
+            name_label.Text = product.Name;
+            shortDesc_Label.Text = product.ShortDescription;
+            weight_label.Text = "Вес: " + product.Weight.ToString() + " кг";
+            instock_label.Text = "В наличии: " + product.InStock.ToString();
+            price_label.Text = product.Price + " ₽";
+            img.Source = product.Image;
+            longDesc_label.Text = product.LongDescription;
+            composition_label.Text = product.Composition;
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BasketPage()); // need logic
         }
     }
 }
