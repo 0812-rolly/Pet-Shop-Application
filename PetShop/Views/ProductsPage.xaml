@@ -67,21 +67,16 @@
                           <Label
                              Grid.Row="1"
                              Grid.Column="3"
-                             Padding="20, 40, 0, 0"
+                             Padding="20, 45, 0, 0"
                              FontAttributes="Bold"
                              FontSize="20"
                              TextColor="#FB6A18"
                              Text="{Binding Price, StringFormat='{0}₽'}"
                              />
 
-                        
-                        <Image Source="basket_mini" WidthRequest="40" HeightRequest="40"
-                               VerticalOptions="Center" HorizontalOptions="Start"
-                               Grid.Row="1" Grid.Column="3" Margin="30,95,0,0"></Image>
-
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
         </CollectionView>
         </ScrollView>
     </StackLayout>

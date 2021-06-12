@@ -40,5 +40,17 @@ namespace PetShop.Views
 
             ((CollectionView)sender).SelectedItem = null;
         }
+
+        void TapGestureRecognizer_Tapped_Basket_mini(System.Object sender, System.EventArgs e)
+        {
+            GotoPageBasket();
+        }
+
+
+
+        public async void GotoPageBasket()
+        {
+            await Navigation.PushAsync(new BasketPage());
+        }
     }
 }
