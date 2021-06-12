@@ -46,8 +46,6 @@ namespace PetShop.ViewModels
             }
         }
 
-
-
         public async void Refresh()
         {
             Products = await productLogic.GetProductsQuery(PropertyController.PetType, PropertyController.Group);

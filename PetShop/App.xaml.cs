@@ -20,7 +20,7 @@ namespace PetShop
             //Device.SetFlags(new[] { "Shapes_Experimental" });
             //DependencyService.Register<MockDataStore>();
 
-            DoShit();
+            DataLoader.LoadData();
 
             NavigationPage np = new NavigationPage(new LoginSuccessPage());
 

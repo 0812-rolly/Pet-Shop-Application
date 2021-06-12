@@ -1,4 +1,5 @@
 ﻿using PetShop.BLL;
+using PetShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,18 @@ namespace PetShop.Views
             PropertyController.Group = group;
             
             InitializeComponent();
+        }
+
+        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var product = e.CurrentSelection.FirstOrDefault() as Product;
+
+            if (product == null)
+                return;
+
+            await Navigation.PushAsync(new ProductPage(product));
+
+            ((CollectionView)sender).SelectedItem = null;
         }
     }
 }

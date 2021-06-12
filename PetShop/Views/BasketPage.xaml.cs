@@ -7,6 +7,7 @@ namespace PetShop.Views
 {
     public partial class BasketPage : ContentPage
     {
+
         public BasketPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);

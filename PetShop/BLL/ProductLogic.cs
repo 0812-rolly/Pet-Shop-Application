@@ -23,6 +23,11 @@ namespace PetShop.BLL
             return products;
         }
 
+        public void AddProduct(Product product)
+        {
+            PetShopDatabase.InsertProduct(product);
+        }
+
         public void IncreaseProductAsync(Product product)
         {
             PetShopDatabase.InsertProduct(product);

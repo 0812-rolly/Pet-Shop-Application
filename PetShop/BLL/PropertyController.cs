@@ -9,7 +9,6 @@ namespace PetShop.BLL
     {
         public static string PetType {get;set; }
         public static string Group { get; set; }
-
-        public static List<Product> Products { get; set; }
+        public static List<Product> basketProducts { get; set; }
     }
 }

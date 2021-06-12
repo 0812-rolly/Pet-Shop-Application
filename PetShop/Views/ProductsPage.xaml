@@ -18,7 +18,9 @@
                 TextColor="White"
                 HorizontalOptions="Center"
                 Clicked="{Binding Refresh}"/>-->
-        <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single">
+        <CollectionView ItemsSource="{Binding Products}" 
+                        SelectionMode="Single"
+                        SelectionChanged="CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid
