@@ -16,6 +16,7 @@ namespace PetShop.Views
         Product product;
         public ProductFullPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 

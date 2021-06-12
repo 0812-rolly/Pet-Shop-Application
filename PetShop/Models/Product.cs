@@ -24,11 +24,12 @@ namespace PetShop.Models
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }
         public string Composition { get; set; }
-        public int Weight { get; set; }
+        public double Weight { get; set; }
         public int Price { get; set; }
         public int InStock { get; set; }
+        public string Image { get; set; }
 
-        public Product(int id, string name, string petType, string group, string shortDescription, string longDescription, string composition, int weight, int price, int inStock)
+        public Product(int id, string name, string petType, string group, string shortDescription, string longDescription, string composition, int weight, int price, int inStock, string image)
         {
             this.Id = id;
             this.Name = name;
@@ -39,6 +40,7 @@ namespace PetShop.Models
             this.Composition = composition;
             this.Weight = weight;
             this.Price = price;
+            Image = image;
             InStock = inStock;
         }
 

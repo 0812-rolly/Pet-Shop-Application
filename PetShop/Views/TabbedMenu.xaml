@@ -4,7 +4,8 @@
             xmlns:views="clr-namespace:PetShop.Views"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-             x:Class="PetShop.Views.TabbedMenu">
+             x:Class="PetShop.Views.TabbedMenu"
+            Background="White">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <NavigationPage Title="Главная" IconImageSource="Home.png">

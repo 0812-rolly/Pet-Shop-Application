@@ -16,6 +16,7 @@ namespace PetShop.Views
     {
         public ProductsPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 
@@ -23,7 +24,8 @@ namespace PetShop.Views
         {
             PropertyController.PetType = petType_;
             PropertyController.Group = group;
-            
+
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 

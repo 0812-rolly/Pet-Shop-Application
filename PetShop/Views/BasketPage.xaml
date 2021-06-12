@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PetShop.Views.BasketPage">
+    x:Class="PetShop.Views.BasketPage"
+    Background="White">
 
     <ContentPage.Content>
         

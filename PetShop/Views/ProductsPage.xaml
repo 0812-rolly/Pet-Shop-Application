@@ -3,41 +3,82 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:PetShop.ViewModels"
              x:Class="PetShop.Views.ProductsPage"
+             BackgroundColor="White" 
              x:Name="PetType">
+
     <ContentPage.BindingContext>
         <viewmodel:ProductViewModel/>
     </ContentPage.BindingContext>
     <StackLayout>
-        <!--<Button x:Name="btn_Proceed" Text="Aboba"
-                Margin="0,70,0,0"
-                BackgroundColor="#FB6A18"
-                CornerRadius="9"
-                WidthRequest="20"
-                HeightRequest="40"
-                FontSize="13"
-                TextColor="White"
-                HorizontalOptions="Center"
-                Clicked="{Binding Refresh}"/>-->
+        <StackLayout>
+            <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+        </StackLayout>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+
         <CollectionView ItemsSource="{Binding Products}" 
                         SelectionMode="Single"
                         SelectionChanged="CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid
-                         Padding="10"
-                         ColumnDefinitions="Auto,*"
-                         RowDefinitions="Auto, *">
+                    <Grid Padding="0,10,0,20" ColumnDefinitions="Auto,*" RowDefinitions="Auto, *">
+
+                        <Image Source="{Binding Image}" WidthRequest="95" HeightRequest="95"
+                               VerticalOptions="Center" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0"></Image>
+
                         <Label
-                             Grid.Column="1"
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 10, 0, 0"
                              FontAttributes="Bold"
-                             TextColor="DarkBlue"
+                             TextColor="Black"
+                             FontSize="18"
                              Text="{Binding Name}" />
                         <Label
                              Grid.Row="1"
-                             Grid.Column="1"
-                             FontAttributes="Bold"
-                             TextColor="DarkBlue"
+                             Grid.Column="2"
+                             Padding="0, 60, 0, 0"
+                             FontSize="15"
+                             TextColor="Black"
                              Text="{Binding ShortDescription}" />
+
+                        <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 110, 0, 0"
+                             FontSize="15"
+                             TextColor="Gray"
+                             Text="{Binding Weight, StringFormat='Вес: {0} кг'}"
+                             />
+
+                        <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 140, 0, 0"
+                             FontSize="15"
+                             TextColor="#71BD6F"
+                             Text="{Binding InStock, StringFormat='В наличии: {0}'}"
+                             />
+
+                          <Label
+                             Grid.Row="1"
+                             Grid.Column="3"
+                             Padding="20, 40, 0, 0"
+                             FontAttributes="Bold"
+                             FontSize="20"
+                             TextColor="#FB6A18"
+                             Text="{Binding Price, StringFormat='{0}₽'}"
+                             />
+
+                        
+                        <Image Source="basket_mini" WidthRequest="40" HeightRequest="40"
+                               VerticalOptions="Center" HorizontalOptions="Start"
+                               Grid.Row="1" Grid.Column="3" Margin="30,95,0,0"></Image>
+
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
