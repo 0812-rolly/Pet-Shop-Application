@@ -34,7 +34,7 @@ namespace PetShop.Views
             if (product == null)
                 return;
 
-            await Navigation.PushAsync(new ProductPage(product));
+            await Navigation.PushAsync(new ProductFullPage(product));
 
             ((CollectionView)sender).SelectedItem = null;
         }

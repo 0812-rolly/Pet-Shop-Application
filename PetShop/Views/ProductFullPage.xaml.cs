@@ -11,15 +11,15 @@ using Xamarin.Forms.Xaml;
 namespace PetShop.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProductPage : ContentPage
+    public partial class ProductFullPage : ContentPage
     {
         Product product;
-        public ProductPage()
+        public ProductFullPage()
         {
             InitializeComponent();
         }
 
-        public ProductPage(Product product) : this()
+        public ProductFullPage(Product product) : this()
         {
             this.product = product;
             SetFields();
