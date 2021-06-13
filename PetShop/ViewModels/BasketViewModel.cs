@@ -47,7 +47,13 @@ namespace PetShop.ViewModels
         {
             Products = await productLogic.GetProductsFromCart();
 
+
             return;
+        }
+
+        public int CountTotalPrice()
+        {
+            return productLogic.CountTotalPrice(Products);
         }
     }
 }

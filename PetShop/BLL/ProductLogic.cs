@@ -134,5 +134,17 @@ namespace PetShop.BLL
         {
             throw new NotImplementedException();
         }
+
+        public int CountTotalPrice(Dictionary<Product, int> basketProducts)
+        {
+            int res = 0;
+            foreach(KeyValuePair<Product,int> p in basketProducts)
+            {
+                res += p.Key.Price * p.Value;
+            }
+
+            return res;
+
+        }
     }
 }

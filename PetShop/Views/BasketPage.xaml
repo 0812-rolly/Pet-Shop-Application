@@ -9,38 +9,204 @@
         <viewmodel:BasketViewModel/>
     </ContentPage.BindingContext>
     <StackLayout>
-        <!--<Button x:Name="btn_Proceed" Text="Aboba"
-                Margin="0,70,0,0"
+        <StackLayout>
+            <Image Source="logo.png" WidthRequest="120" HeightRequest="60" Margin="10"/>
+        </StackLayout>
+        <Line X1="0"
+              Y1="0"
+              X2="412"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+
+        <Label Text="Корзина"
+                                    FontSize="21"
+                                    TextColor="Black"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Start"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0, 10, 0, 10"/>
+        <Line X1="0"
+              Y1="0"
+              X2="442"
+              Y2="0"
+              Stroke="Gray"
+              StrokeThickness="1"/>
+
+        <ScrollView>
+            <StackLayout>
+
+                <CollectionView ItemsSource="{Binding Products}" 
+                        SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+                            <Grid
+                         Padding="10"
+                         RowDefinitions="Auto,*"
+                         ColumnDefinitions="Auto,*">
+                                
+
+                                <Image Source="{Binding Key.Image}" WidthRequest="125" HeightRequest="125"
+                               VerticalOptions="Start" Grid.Column="1" Grid.Row="1" Margin="0,10,0,0"></Image>
+
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Padding="0, 10, 0, 0"
+                             FontAttributes="Bold"
+                             TextColor="Black"
+                             FontSize="18"
+                             Text="{Binding Key.Name}" />
+
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Padding="0, 45, 0, 0"
+                             FontSize="15"
+                             TextColor="Black"
+                             Text="{Binding Key.ShortDescription}" />
+
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 90, 0, 0"
+                             FontSize="15"
+                             TextColor="Gray"
+                             Text="{Binding Key.Weight, StringFormat='Вес: {0} кг'}"
+                             />
+
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 120, 0, 0"
+                             FontSize="15"
+                             TextColor="#71BD6F"
+                             Text="{Binding Key.InStock, StringFormat='В наличии: {0}'}"
+                             />
+
+                                <Button x:Name="btn_Minus"
+                                    Text="-"
+                                    FontSize="25"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    WidthRequest="45"
+                                    HeightRequest="45"
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    Margin="0,160,0,0"
+                                    Clicked="DecreaseQuantity"
+
+                                    />
+
+                                <Label
+                                     Grid.Row="1"
+                                     Grid.Column="2"
+                                     FontSize="18"
+                                     TextColor="Black"
+                                     HorizontalTextAlignment="Center"
+                                     Text="1"
+                                     Margin="0,170,0,0"
+                             />
+
+                                <Button x:Name="btn_Plus"
+                                    Text="+"
+                                    FontSize="20"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    WidthRequest="45"
+                                    HeightRequest="45"
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    Margin="80,160,0,0"
+                                    Clicked="IncreaseQuantity"
+                                    />
+
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Padding="0, 230, 0, 0"
+                             FontSize="29"
+                             TextColor="Black"
+                             Text="{Binding Key.Price, StringFormat='{0}₽'}"
+                             />
+
+                                <Image x:Name="Basket" Source="basket_delete.png" Aspect="AspectFit"
+                                       Grid.Row="1" Grid.Column="3" Margin="0,230,0,30" WidthRequest="40" HeightRequest="40">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Basket"
+                                          NumberOfTapsRequired="1"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+
+
+
+                                <!--<Line X1="0"
+                                      Y1="0"
+                                      X2="600"
+                                      Y2="0"
+                                      Stroke="Gray"
+                                      Margin="-20, 300, -20, 0"
+                                      Grid.Row="1"
+                                      Grid.Column="1"
+                                      Grid.ColumnSpan="3"
+                                      StrokeThickness="1"/>-->
+                            </Grid>
+
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+
+
+
+        <Grid Padding="0"
+                         ColumnDefinitions="Auto,*"
+                         RowDefinitions="Auto, *">
+
+            <Rectangle Fill="#F2C960"
+            Grid.Row="1"
+            WidthRequest="580"
+            HeightRequest="100"
+            Margin="-20, 0, -20, 0" />
+
+            <Label Text="Сумма заказа: "
+            Grid.Row="1"
+            FontSize="18"
+            TextColor="Black"
+            VerticalOptions="Start"
+            HorizontalTextAlignment="Start"
+            Margin="50, 12, 0, 0"/>
+
+            
+            <Label x:Name="TotalPrice" Text=""
+            Grid.Row="1"
+            FontSize="18"
+            FontAttributes="Bold"
+            TextColor="Black"
+            Margin="290, 12, 0, 0"/>
+
+        <Button x:Name="btn_Proceed"
+                Padding="10,10,10,10"
+                Text="Оплатить заказ"
+                Margin="-130,10,0,0"
+                Grid.Row="2"
                 BackgroundColor="#FB6A18"
                 CornerRadius="9"
-                WidthRequest="20"
-                HeightRequest="40"
+                WidthRequest="200"
+                HeightRequest="30"
                 FontSize="13"
                 TextColor="White"
                 HorizontalOptions="Center"
-                Clicked="{Binding Refresh}"/>-->
-        <CollectionView ItemsSource="{Binding Products}" 
-                        SelectionMode="Single">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid
-                         Padding="10"
-                         ColumnDefinitions="Auto,*"
-                         RowDefinitions="Auto, *">
-                        <Label
-                             Grid.Column="1"
-                             FontAttributes="Bold"
-                             TextColor="DarkBlue"
-                             Text="{Binding Key.Name}" />
-                        <Label
-                             Grid.Row="1"
-                             Grid.Column="1"
-                             FontAttributes="Bold"
-                             TextColor="DarkBlue"
-                             Text="{Binding Value}" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                Clicked="BuyAndOrder"
+                />
+
+        </Grid>
     </StackLayout>
 </ContentPage>

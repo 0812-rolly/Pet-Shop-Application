@@ -25,5 +25,6 @@ namespace PetShop.BLL
         void UpdateProductInCart(Product product, int newQuantity);
         void UpdateProductInDatabase(Product product, int newInStock);
         void FromCartToOrder();
+        int CountTotalPrice(Dictionary<Product, int> Products);
     }
 }
