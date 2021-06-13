@@ -36,21 +36,11 @@ namespace PetShop.Views
             if (product == null)
                 return;
 
+            //await Navigation.PushAsync(new ProductFullPage(product));
             await Navigation.PushAsync(new ProductFullPage(product));
 
             ((CollectionView)sender).SelectedItem = null;
         }
 
-        void TapGestureRecognizer_Tapped_Basket_mini(System.Object sender, System.EventArgs e)
-        {
-            GotoPageBasket();
-        }
-
-
-
-        public async void GotoPageBasket()
-        {
-            await Navigation.PushAsync(new BasketPage());
-        }
     }
 }

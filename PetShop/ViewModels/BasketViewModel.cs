@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace PetShop.ViewModels
 {
-    class BasketViewModel
+    public class BasketViewModel : INotifyPropertyChanged
     {
-        public List<Product> products;
+        public Dictionary<Product, int> products;
 
         public IProductLogic productLogic;
 
@@ -18,8 +20,9 @@ namespace PetShop.ViewModels
         public BasketViewModel()
         {
             productLogic = new ProductLogic();
+            PropertyController.basketViewModel = this;
 
-            products = PropertyController.basketProducts;
+            Refresh();
         }
 
         public void OnPropertyChanged(string name)
@@ -27,7 +30,7 @@ namespace PetShop.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        public List<Product> Products
+        public Dictionary<Product, int> Products
         {
             get { return products; }
             set
@@ -38,6 +41,13 @@ namespace PetShop.ViewModels
                     OnPropertyChanged(nameof(Products));
                 }
             }
+        }
+
+        public async void Refresh()
+        {
+            Products = await productLogic.GetProductsFromCart();
+
+            return;
         }
     }
 }

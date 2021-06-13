@@ -7,7 +7,7 @@ namespace PetShop.BLL
 {
     class DataLoader
     {
-        public static void LoadData()
+        public async static void LoadData()
         {
             IProductLogic productLogic = new ProductLogic();
 
@@ -131,6 +131,13 @@ namespace PetShop.BLL
             productLogic.AddProduct(prod6);
             productLogic.AddProduct(prod7);
             productLogic.AddProduct(prod8);
+
+            //Product p1 = await productLogic.GetProduct(1);
+            //Product p2 = await productLogic.GetProduct(2);
+            //productLogic.AddProductToCart(p1);
+            //productLogic.AddProductToCart(p2);
+
+            return;
         }
     }
 }

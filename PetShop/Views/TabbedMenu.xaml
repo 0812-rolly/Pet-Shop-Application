@@ -18,7 +18,7 @@
                 <views:UserPage/>
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="Корзина" IconImageSource="Basket.png">
+        <NavigationPage x:Name="BasketPage" Title="Корзина" IconImageSource="Basket.png">
             <x:Arguments>
                 <views:BasketPage/>
             </x:Arguments>

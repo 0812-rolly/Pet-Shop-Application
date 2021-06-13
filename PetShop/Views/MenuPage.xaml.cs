@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShop.BLL;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -16,10 +17,14 @@ namespace PetShop.Views
             Dogs.Source = "Dogs.png";
             Birds.Source = "Birds.png";
             Rodents.Source = "Rodents.png";
+
+            PropertyController.MenuPage = this;
         }
 
-
-
+        protected override void OnAppearing()
+        {
+            PropertyController.MenuPage.Navigation.PopToRootAsync();
+        }
         void TapGestureRecognizer_Tapped_Cats(System.Object sender, System.EventArgs e)
         {
             GotoPageCats();

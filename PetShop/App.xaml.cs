@@ -20,6 +20,8 @@ namespace PetShop
             //Device.SetFlags(new[] { "Shapes_Experimental" });
             //DependencyService.Register<MockDataStore>();
 
+            //PropertyController.BasketListProvider.BasketProducts = new Dictionary<Product, int>();
+            //PropertyController.BasketFlag = true;
             DataLoader.LoadData();
 
             NavigationPage np = new NavigationPage(new LoginSuccessPage());
@@ -44,10 +46,6 @@ namespace PetShop
             prod3.Group = "Влажный корм";
             prod3.PetType = "Кошки";
             prod3.Name = "ABOBA";
-
-            productLogic.IncreaseProductAsync(prod1);
-            productLogic.IncreaseProductAsync(prod2);
-            productLogic.IncreaseProductAsync(prod3);
 
             List<Product> products = new List<Product>();
 

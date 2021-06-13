@@ -1,4 +1,5 @@
-﻿using PetShop.Models;
+﻿using PetShop.BLL;
+using PetShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace PetShop.Views
     public partial class ProductFullPage : ContentPage
     {
         Product product;
+        IProductLogic productLogic = new ProductLogic();
+
         public ProductFullPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
@@ -38,9 +41,9 @@ namespace PetShop.Views
             composition_label.Text = product.Composition;
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new BasketPage()); // need logic
+            productLogic.AddProductToCart(product);
         }
     }
 }

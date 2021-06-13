@@ -27,6 +27,7 @@ namespace PetShop
             Database = new SQLiteAsyncConnection(databasePath, SQLiteOpenFlags.Create | SQLiteOpenFlags.FullMutex | SQLiteOpenFlags.ReadWrite);
 
             Database.CreateTableAsync<Product>().Wait();
+            Database.CreateTableAsync<BasketItem>().Wait();
 
             //await Database.CreateTableAsync<Product>();
         }
@@ -40,6 +41,15 @@ namespace PetShop
             return product;
         }
 
+        public static async Task<BasketItem> GetProductFromCart(int id)
+        {
+            await Init();
+
+            var basketItem = Database.Table<BasketItem>().FirstOrDefaultAsync(x => x.ProductId == id);
+
+            return await basketItem;
+        }
+
         public static async Task<List<Product>> GetProductsQuery(string petType, string group)
         {
             await Init();
@@ -51,13 +61,59 @@ namespace PetShop
             return result;
         }
 
+        public static async Task<List<Product>> GetAllProductsQuery()
+        {
+            await Init();
+
+            var products = Database.Table<Product>();
+
+            List<Product> result = await products.ToListAsync();
+
+            return result;
+        }
+
+        public static async Task<List<BasketItem>> GetProductsFromCart()
+        {
+            await Init();
+
+            var products = await Database.Table<BasketItem>().ToListAsync();
+
+            return products;
+        }
+
         public static async void InsertProduct(Product product)
         {
             await Init();
 
             int result = await Database.InsertAsync(product);
+        }
 
-            List<Product> products = await Database.Table<Product>().ToListAsync();
+        public static async void InsertToCart(BasketItem basketItem)
+        {
+            await Init();
+
+            await Database.InsertAsync(basketItem);
+        }
+
+        public static async void RemoveFromCart(BasketItem basketItem)
+        {
+            await Init();
+
+            await Database.DeleteAsync(basketItem);
+        }
+
+        public static async void UpdateInDatabase(Product product)
+        {
+            await Init();
+
+            int result = await Database.UpdateAsync(product);
+        }
+
+        public static async void UpdateInCart(BasketItem basketItem)
+        {
+            await Init();
+
+            int result = await Database.UpdateAsync(basketItem);
         }
     }
 }
