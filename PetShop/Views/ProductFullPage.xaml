@@ -53,7 +53,16 @@
                              />
                 </Grid>
 
-                <Button Text="В корзину"
+
+                    <Label x:Name="productCount" FontSize="27"
+                                     TextColor="Black"
+                                     Text="1"
+                                     Margin="80,17,0,0"/>
+
+                    <Stepper x:Name="stepper" Minimum="1" Increment="1" Margin="180,-47,0,10" ValueChanged="stepper_ValueChanged"/>
+
+
+                <Button Text="Добавить в корзину"
                 WidthRequest="250"
                 HeightRequest="40"
                 CornerRadius="9"

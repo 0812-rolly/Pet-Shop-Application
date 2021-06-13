@@ -27,16 +27,26 @@
                TextColor="#F54A00"
                HorizontalTextAlignment="Center"
                FontAttributes="Bold"
-               Margin="80,130,80,0"/>
+               Margin="80,115,80,0"/>
 
             <Label Text="Электронный чек отправлен на почту, указанную в Вашем личном кабинете."
                FontSize="16"
                FontFamily="Open Sans"
                TextColor="Black"
                HorizontalTextAlignment="Center"
-               Margin="75,25,75,0"/>
+               Margin="75,20,75,0"/>
 
-            <Image Source="Thank_cat" WidthRequest="240" HeightRequest="240" Margin="0,27,0,0"></Image>
+            <Image Source="Thank_cat" WidthRequest="240" HeightRequest="240" Margin="0,20,0,0"></Image>
+
+            <Button x:Name="btn_Login" Text="Вернуться на главную"
+                Margin="0,30,0,0"
+                BackgroundColor="#FB6A18"
+                    CornerRadius="9"
+                WidthRequest="220"
+                HeightRequest="40"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Clicked="ToMenuPage"/>
 
         </StackLayout>
     </Grid>

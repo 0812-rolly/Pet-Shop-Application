@@ -39,11 +39,19 @@ namespace PetShop.Views
             img.Source = product.Image;
             longDesc_label.Text = product.LongDescription;
             composition_label.Text = product.Composition;
+            stepper.Maximum = (double)product.InStock;
+
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             productLogic.AddProductToCart(product);
         }
-    }
+
+        void stepper_ValueChanged(System.Object sender, Xamarin.Forms.ValueChangedEventArgs e)
+        {
+            productCount.Text = e.NewValue.ToString();
+        }
+
+    };
 }

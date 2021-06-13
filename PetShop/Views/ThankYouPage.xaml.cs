@@ -12,5 +12,12 @@ namespace PetShop.Views
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
+
+        private async void ToMenuPage(object sender, EventArgs e)
+        {
+
+                await Navigation.PushAsync(new MenuPage());
+
+        }
     }
 }

@@ -87,76 +87,25 @@
                              Text="{Binding Key.InStock, StringFormat='В наличии: {0}'}"
                              />
 
-                                <Button x:Name="btn_Minus"
-                                    Text="-"
-                                    FontSize="25"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Start"
-                                    WidthRequest="45"
-                                    HeightRequest="45"
-                                    Grid.Row="1"
-                                    Grid.Column="2"
-                                    Margin="0,160,0,0"
-                                    Clicked="DecreaseQuantity"
-
-                                    />
-
-                                <Label
-                                     Grid.Row="1"
-                                     Grid.Column="2"
-                                     FontSize="18"
-                                     TextColor="Black"
-                                     HorizontalTextAlignment="Center"
-                                     Text="1"
-                                     Margin="0,170,0,0"
-                             />
-
-                                <Button x:Name="btn_Plus"
-                                    Text="+"
-                                    FontSize="20"
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="Start"
-                                    WidthRequest="45"
-                                    HeightRequest="45"
-                                    Grid.Row="1"
-                                    Grid.Column="2"
-                                    Margin="80,160,0,0"
-                                    Clicked="IncreaseQuantity"
-                                    />
-
                                 <Label
                              Grid.Row="1"
                              Grid.Column="2"
-                             Padding="0, 230, 0, 0"
+                             Padding="0, 180, 0, 0"
                              FontSize="29"
                              TextColor="Black"
                              Text="{Binding Key.Price, StringFormat='{0}₽'}"
                              />
 
-                                <Image x:Name="Basket" Source="basket_delete.png" Aspect="AspectFit"
-                                       Grid.Row="1" Grid.Column="3" Margin="0,230,0,30" WidthRequest="40" HeightRequest="40">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Basket"
-                                          NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Label
+                             Grid.Row="1"
+                             Grid.Column="3"
+                             Padding="20, 185, 0, 0"
+                             FontSize="23"
+                             TextColor="Black"
+                             Text="{Binding Value, StringFormat='{0} шт.'}"
+                             />
 
-
-
-
-                                <!--<Line X1="0"
-                                      Y1="0"
-                                      X2="600"
-                                      Y2="0"
-                                      Stroke="Gray"
-                                      Margin="-20, 300, -20, 0"
-                                      Grid.Row="1"
-                                      Grid.Column="1"
-                                      Grid.ColumnSpan="3"
-                                      StrokeThickness="1"/>-->
                             </Grid>
-
-
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -192,19 +141,36 @@
             TextColor="Black"
             Margin="290, 12, 0, 0"/>
 
+ 
+
         <Button x:Name="btn_Proceed"
                 Padding="10,10,10,10"
                 Text="Оплатить заказ"
-                Margin="-130,10,0,0"
+                Margin="50,10,0,0"
                 Grid.Row="2"
                 BackgroundColor="#FB6A18"
                 CornerRadius="9"
-                WidthRequest="200"
+                WidthRequest="160"
                 HeightRequest="30"
                 FontSize="13"
                 TextColor="White"
                 HorizontalOptions="Center"
                 Clicked="BuyAndOrder"
+                />
+
+         <Button x:Name="btn_DeleteAll"
+                Padding="10,10,10,10"
+                Text="Очистить корзину"
+                Margin="-310,10,0,0"
+                Grid.Row="2"
+                BackgroundColor="#DF5050"
+                CornerRadius="9"
+                WidthRequest="160"
+                HeightRequest="30"
+                FontSize="13"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Clicked="DeleteAll"
                 />
 
         </Grid>
