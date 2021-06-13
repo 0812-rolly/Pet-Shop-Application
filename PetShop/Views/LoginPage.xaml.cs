@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PetShop.Models;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,7 +20,7 @@ namespace PetShop.Views
             btn_Login.Clicked += (sender, args) => OnButtonClicked(sender, args);
         }
 
-        private async void OnButtonClicked(object sender, EventArgs e) 
+        private async void OnButtonClicked(object sender, EventArgs e)
         {
             bool error = false;
 
@@ -40,7 +40,9 @@ namespace PetShop.Views
             {
                 Models.User.Phone = etr_PhoneNumber.Text;
                 await Navigation.PushAsync(new LoginConfirmPage());
+
             }
+
         }
     }
 }

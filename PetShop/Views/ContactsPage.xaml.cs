@@ -23,7 +23,6 @@ namespace PetShop.Views
 
         protected override void OnAppearing()
         {
-            productLogic.FromCartToOrder();
         }
     }
 }
