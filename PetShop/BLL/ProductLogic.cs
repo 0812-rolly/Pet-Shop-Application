@@ -68,12 +68,12 @@ namespace PetShop.BLL
             PetShopDatabase.InsertProduct(product);
         }
 
-        public void AddProductToCart(Product product)
+        public void AddProductToCart(Product product, int quantity)
         {
             BasketItem basketItem = new BasketItem()
             {
                 ProductId = product.Id,
-                Quantity = 1
+                Quantity = quantity
             };
 
             PetShopDatabase.InsertToCart(basketItem);
@@ -120,8 +120,6 @@ namespace PetShop.BLL
                     BasketItem basketItem = cartItems.Find(x => x.ProductId == p.Id);
                     UpdateProductInDatabase(p, p.InStock - basketItem.Quantity);
                     RemoveProductFromCart(p);
-
-                    int y = 5;
                 }
                 catch (NullReferenceException)
                 {
@@ -144,7 +142,11 @@ namespace PetShop.BLL
             }
 
             return res;
+        }
 
+        public void RemoveProductsFromCart()
+        {
+            PetShopDatabase.RemoveFromCartAll();
         }
     }
 }

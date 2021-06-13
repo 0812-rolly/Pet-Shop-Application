@@ -12,10 +12,12 @@ namespace PetShop.BLL
         Task<bool> ReduceProductAsync(Product product);
         
         void AddProduct(Product product);
-        void AddProductToCart(Product product);
+        void AddProductToCart(Product product, int quantity);
 
         void RemoveProductFromCart(Product product);
-        
+
+        void RemoveProductsFromCart();
+
         Task<Dictionary<Product, int>> UpdateProductsCart();
         Task<Product> GetProduct(int id);
         Task<List<Product>> GetProductsQuery();

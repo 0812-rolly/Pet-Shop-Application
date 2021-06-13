@@ -17,14 +17,9 @@ namespace PetShop
         public App()
         {
             InitializeComponent();
-            //Device.SetFlags(new[] { "Shapes_Experimental" });
-            //DependencyService.Register<MockDataStore>();
-
-            //PropertyController.BasketListProvider.BasketProducts = new Dictionary<Product, int>();
-            //PropertyController.BasketFlag = true;
             DataLoader.LoadData();
 
-            NavigationPage np = new NavigationPage(new LoginSuccessPage());
+            NavigationPage np = new NavigationPage(new HelloPage());
 
             MainPage = np;
         }

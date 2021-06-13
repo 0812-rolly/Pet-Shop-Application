@@ -18,7 +18,6 @@ namespace PetShop
             if (Database != null)
                 return;
 
-            //string databasePath = "PetShop.db";
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PetShop.db");
 
             if (File.Exists(databasePath))
@@ -28,8 +27,6 @@ namespace PetShop
 
             Database.CreateTableAsync<Product>().Wait();
             Database.CreateTableAsync<BasketItem>().Wait();
-
-            //await Database.CreateTableAsync<Product>();
         }
 
         public static async Task<Product> GetProduct(int id)
@@ -100,6 +97,13 @@ namespace PetShop
             await Init();
 
             await Database.DeleteAsync(basketItem);
+        }
+
+        public static async void RemoveFromCartAll()
+        {
+            await Init();
+
+            await Database.DeleteAllAsync<BasketItem>();
         }
 
         public static async void UpdateInDatabase(Product product)

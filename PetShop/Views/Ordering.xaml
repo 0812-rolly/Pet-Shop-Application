@@ -95,7 +95,7 @@
 
             <StackLayout RadioButtonGroup.GroupName="payment"
                  Orientation="Horizontal" Margin="40,10,0,0">
-                <RadioButton Value="Cash">
+                <RadioButton x:Name="cashRB" Value="Cash" CheckedChanged="RadioButton_CheckedChanged">
                     <RadioButton.Content>
                         <StackLayout>
                             <Image Source="Cash.png"
@@ -107,7 +107,7 @@
                         </StackLayout>
                     </RadioButton.Content>
                 </RadioButton>
-                <RadioButton Value="Card">
+                <RadioButton x:Name="cardRB" Value="Card" CheckedChanged="RadioButton_CheckedChanged_1">
                     <RadioButton.Content>
                         <StackLayout>
                             <Image Source="Card.png"

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -45,7 +44,7 @@ namespace PetShop.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            productLogic.AddProductToCart(product);
+            productLogic.AddProductToCart(product, int.Parse(productCount.Text));
         }
 
         void stepper_ValueChanged(System.Object sender, Xamarin.Forms.ValueChangedEventArgs e)

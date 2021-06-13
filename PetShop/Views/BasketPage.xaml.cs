@@ -8,6 +8,7 @@ namespace PetShop.Views
 {
     public partial class BasketPage : ContentPage
     {
+        IProductLogic productLogic = new ProductLogic();
 
         public BasketPage()
         {
@@ -29,26 +30,35 @@ namespace PetShop.Views
 
             BasketViewModel viewModel = BindingContext as BasketViewModel;
             viewModel.Refresh();
-            SetTotalPrice();
+            int totalPrice = SetTotalPrice();
 
+            if (totalPrice == 0)
+                btn_Proceed.IsEnabled = false;
+            else
+                btn_Proceed.IsEnabled = true;
         }
 
-        public void SetTotalPrice()
+        public int SetTotalPrice()
         {
             BasketViewModel viewModel = BindingContext as BasketViewModel;
             int totalPrice = viewModel.CountTotalPrice();
 
             TotalPrice.Text = totalPrice.ToString() + " ₽";
+
+            return totalPrice;
         }
 
         void DeleteAll(System.Object sender, System.EventArgs e)
         {
-
+            productLogic.RemoveProductsFromCart();
+            BasketViewModel viewModel = BindingContext as BasketViewModel;
+            viewModel.Refresh();
+            SetTotalPrice();
         }
 
-        void BuyAndOrder(System.Object sender, System.EventArgs e)
+        public async void BuyAndOrder(System.Object sender, System.EventArgs e)
         {
-
+            await Navigation.PushAsync(new Ordering());
         }
     }
 }

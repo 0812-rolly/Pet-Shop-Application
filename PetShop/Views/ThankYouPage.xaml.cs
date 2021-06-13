@@ -15,9 +15,8 @@ namespace PetShop.Views
 
         private async void ToMenuPage(object sender, EventArgs e)
         {
-
-                await Navigation.PushAsync(new MenuPage());
-
+            await Navigation.PopToRootAsync();
+            await Navigation.PushAsync(new MenuPage());
         }
     }
 }
